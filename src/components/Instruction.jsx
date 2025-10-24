@@ -1,8 +1,6 @@
 import '../styles/Instructions.css';
 
 function Score({ scoreType, scores }) {
-
-    console.log('score ',scores.score);
     return (
       <>
       {scoreType === "current" ? (
