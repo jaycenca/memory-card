@@ -1,0 +1,32 @@
+.header-app {
+    padding: 0 2rem;
+  
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  
+    color: white;
+  }
+  
+  .img-logo-hearthstone {
+    height: 100px;
+  }
+  
+  .anc-github {
+    background-color: transparent;
+    border: none;
+  
+    transition: opacity 0.3s ease;
+  }
+  
+  .anc-github:hover {
+    opacity: 0.6;
+  }
+  
+  .icon-github {
+    margin-top: 20px;
+    width: 36px;
+    height: 36px;
+  
+    fill: var(--c-text);
+  }

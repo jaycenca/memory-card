@@ -1,0 +1,49 @@
+.container-instructions {
+    padding: 0 2rem;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  
+    color: rgb(8, 6, 6);
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .instructions,
+  .current-score-label,
+  .best-score-label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: var(--c-text);
+  }
+  
+  .instructions {
+    max-width: 400px;
+    color: blue;
+  }
+  
+  .container-scores {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .score {
+    padding: 0 0.75rem 0.25rem;
+  
+    color: white;
+    font-family: "Belwe Bold", serif;
+    font-size: 1.5rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border: 1px solid #000;
+    border-radius: 12px;
+  }
+  
+  .current-score {
+    background: rgb(46, 172, 54);
+  }
+  
+  .best-score {
+    background: rgb(0, 255, 149);
+  }
