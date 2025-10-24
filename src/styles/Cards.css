@@ -1,0 +1,21 @@
+.container-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+  .card {
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .card:hover {
+    opacity: 0.8;
+    transform: scale(1.05) rotate(2deg);
+  }
+  
+  @media (max-width: 600px) {
+    .container-cards {
+      padding: 0 2rem;
+    }
+  }
