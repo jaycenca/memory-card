@@ -1,4 +1,25 @@
-export default function Card({ card, scores, shuffleCards, tempArray, setTempArray}) {
+interface CardData {
+    id: number;
+    name: string;
+    image: string;
+}
+
+interface Scores {
+    score: number;
+    bestScore: number;
+    setScore: (value: number) => void;
+    setBestScore: (value: number) => void;
+}
+
+interface CardProps {
+    card: CardData;
+    scores: Scores;
+    shuffleCards: () => void;
+    tempArray: CardData[];
+    setTempArray: (value: CardData[]) => void;
+}
+
+export default function Card({ card, scores, shuffleCards, tempArray, setTempArray}: CardProps) {
     function handleClick() {
         shuffleCards();
 
@@ -25,3 +46,4 @@ export default function Card({ card, scores, shuffleCards, tempArray, setTempArr
         />
     )
 }
+

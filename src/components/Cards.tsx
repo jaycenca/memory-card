@@ -1,14 +1,32 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
 import '../styles/Cards.css';
-export default function Cards({scores}) {
-    const [cards, setCards] = useState([]);
+
+interface CardData {
+    id: number;
+    name: string;
+    image: string;
+}
+
+interface Scores {
+    score: number;
+    bestScore: number;
+    setScore: (value: number) => void;
+    setBestScore: (value: number) => void;
+}
+
+interface CardsProps {
+    scores: Scores;
+}
+
+export default function Cards({scores}: CardsProps) {
+    const [cards, setCards] = useState<CardData[]>([]);
 
     const url = 'https://botw-compendium.herokuapp.com/api/v3/compendium/category/creatures';
 
-    const [tempArray, setTempArray] = useState([])
+    const [tempArray, setTempArray] = useState<CardData[]>([])
 
-    function shuffleCards(array) {
+    function shuffleCards(array: CardData[]) {
         let arr = array.slice()
 
         let currentIndex = arr.length;
@@ -45,13 +63,13 @@ export default function Cards({scores}) {
 
             let startingIndex = 0;
             let endingIndex = 10;
-            let filteredCards = []
+            let filteredCards: CardData[] = []
 
             for(let i=startingIndex; i< endingIndex;i++) {
                 filteredCards.push(data.data[i]);
             }
   
-            filteredCards = filteredCards.map(card => {
+            filteredCards = filteredCards.map((card: {id: number; name: string; image: string}) => {
                 return {
                     id: card.id,
                     name: card.name,
@@ -75,3 +93,4 @@ export default function Cards({scores}) {
         </>
     );
 }
+
