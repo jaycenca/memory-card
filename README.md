@@ -38,10 +38,12 @@ There are 3 main components under root
   - Headers.css
   - Instructions.css
 
-- Shared Components
-  - Textbox
-
 All of the data/state is passed into the root `App` component and passed via reference to the other components.
+
+## API Used
+https://gadhagod.github.io/Hyrule-Compendium-API/#/compendium-api
+
+Get Category - param: creatures
 
 ## Build and Install
 
@@ -57,3 +59,12 @@ To build locally
 ```bash
 npm run build
 ```
+
+## Deployment
+Cloudflare
+
+- to deploy the app successful, must include *wrangler.toml*
+- the file must include the following fields: 
+   ```bash
+   compatibility_date="YYYY-MM-DD"
+   ```
