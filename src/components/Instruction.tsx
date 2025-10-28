@@ -1,6 +1,14 @@
 import '../styles/Instructions.css';
 
-function Score({ scoreType, scores }) {
+interface ScoreProps {
+    scoreType: "current" | "best";
+    scores: {
+        score: number;
+        bestScore: number;
+    };
+}
+
+function Score({ scoreType, scores }: ScoreProps) {
     return (
       <>
       {scoreType === "current" ? (
@@ -12,7 +20,14 @@ function Score({ scoreType, scores }) {
     );
 }
 
-export default function Instructions({scores}) {
+interface InstructionsProps {
+    scores: {
+        score: number;
+        bestScore: number;
+    };
+}
+
+export default function Instructions({scores}: InstructionsProps) {
     const instructions = "To play this Zelda-inspired memory card game, simply keep selecting unique cards for each round. If you select a card that you've chosen previously, then you start over. To win, you must keep selecting unique cards for each round until you reach a score of 12!"
     return (
         <>
@@ -26,3 +41,4 @@ export default function Instructions({scores}) {
         </>
     );
 }
+

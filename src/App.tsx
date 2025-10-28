@@ -5,8 +5,8 @@ import Header from './components/Header'
 import Cards from './components/Cards'
 
 function App() {
-  const [score, setScore] = useState(0)
-  const [bestScore, setBestScore] = useState(0)
+  const [score, setScore] = useState<number>(0)
+  const [bestScore, setBestScore] = useState<number>(0)
   return (
     <>
       <Header />
@@ -26,3 +26,4 @@ function App() {
 }
 
 export default App
+
